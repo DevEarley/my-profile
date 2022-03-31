@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'mfe-poc-my-profile-entry',
   template: `<div class="remote-entry">
-    <h2>my-profile's Remote Entry Component (LOCALHOST)</h2>
+    <h2>my-profile's Remote Entry Component (LOCALHOST:1234)</h2>
   </div>`,
   styles: [
     `
