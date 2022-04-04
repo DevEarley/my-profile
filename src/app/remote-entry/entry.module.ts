@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
+import { AdminComponent } from './admin.component';
+import { AuthGuard } from '@mfe-poc/mfe-poc-services-lib';
 
 @NgModule({
   declarations: [RemoteEntryComponent],
@@ -13,9 +15,14 @@ import { RemoteEntryComponent } from './entry.component';
         path: '',
         component: RemoteEntryComponent,
       },
+      {
+        path: 'admin',
+        component: AdminComponent,
+        canActivate: [AuthGuard]
+      },
     ]),
   ],
-  providers: [],
+  providers: [AuthGuard],
   exports: [RemoteEntryComponent],
 
 })
